@@ -7,7 +7,7 @@ import { HttpClientModule }    from '@angular/common/http';
 
 // #docregion import-in-mem-stuff
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService } from './in-memory-data.service';
 // #enddocregion import-in-mem-stuff
 
 import { AppRoutingModule }     from './app-routing.module';
@@ -17,7 +17,7 @@ import { DashboardComponent }   from './dashboard/dashboard.component';
 import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
 import { HeroesComponent }      from './heroes/heroes.component';
 // #enddocregion v1
-import { HeroSearchComponent }  from './hero-search/hero-search.component';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 // #docregion v1
 import { HeroService }          from './hero.service';
 import { MessageService }       from './message.service';

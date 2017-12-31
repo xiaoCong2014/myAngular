@@ -1,0 +1,41 @@
+<!-- #docregion v2, -->
+<h1>My First Attribute Directive</h1>
+
+<h4>Pick a highlight color</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+
+<!--<p myHighLightDirective [highlightColor]="color" [highlightColor2]="color">Highlight me!</p>-->
+<!--appMyHighLight-->
+
+
+
+<!-- #docregion color -->
+<p myHighLightDirective [highlightColor]="color">Highlight me!</p>
+<!-- #enddocregion color, v2 -->
+
+<!-- #docregion defaultColor -->
+<p myHighLightDirective [highlightColor]="color" [defaultColor]="'violet'">
+Highlight me too!
+</p>
+
+<p myHighLightDirective [defaultColor]="'violet'">
+  Highlight me 3
+</p>
+
+<!-- #enddocregion defaultColor, -->
+
+<hr>
+<p><i>Mouse over the following lines to see fixed highlights</i></p>
+
+<p myHighLightDirective [highlightColor]="'yellow'">Highlighted in yellow</p>
+
+<!--左边要加中括号 , 右边加上单引号才是直接给数值 -->
+<p myHighLightDirective [highlightColor]="'orange'">Highlighted in orange</p>
+
+
+<!--<p myHighLightDirective highlightColor="orange">Highlighted in orange</p>-->
+

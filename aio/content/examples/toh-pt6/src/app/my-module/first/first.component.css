@@ -1,0 +1,49 @@
+.myKeyFramesClass
+{
+  width:100px;
+  height:100px;
+  background:red;
+  animation:myFirst 5s;
+}
+
+.myKeyFramesClass2
+{
+  width:100px;
+  height:100px;
+  background:red;
+  animation:myFirst2 5s;
+}
+
+
+.myKeyFramesClass3
+{
+  width:100px;
+  height:100px;
+  background:red;
+  animation:myFirst3 5s;
+}
+
+@keyframes myFirst
+{
+  from {background:red;}
+  to {background:yellow;}
+}
+
+
+@keyframes myFirst2
+{
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: blue;}
+  100% {background: green;}
+}
+
+@keyframes myFirst3
+{
+  0%   {background: red; left:0px; top:0px;}
+  25%  {background: yellow; left:200px; top:0px;}
+  50%  {background: blue; left:200px; top:200px;}
+  75%  {background: green; left:0px; top:200px;}
+  100% {background: red; left:0px; top:0px;}
+}
+

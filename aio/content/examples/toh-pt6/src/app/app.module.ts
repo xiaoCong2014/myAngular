@@ -22,6 +22,13 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroService }          from './hero.service';
 import { MessageService }       from './message.service';
 import { MessagesComponent }    from './messages/messages.component';
+import { HeroDetail2Component } from './hero-detail-2/hero-detail-2.component';
+
+import { NgZorroAntdModule } from 'ng-zorro-antd';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MyHighLightDirective } from './directive/my-high-light.directive';
+import { MyHighLightComponentComponent } from './my-high-light-component/my-high-light-component.component';
 
 @NgModule({
   imports: [
@@ -36,7 +43,11 @@ import { MessagesComponent }    from './messages/messages.component';
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+
+    NgZorroAntdModule.forRoot(),
+    BrowserAnimationsModule
+
     // #enddocregion in-mem-web-api-imports
   ],
   declarations: [
@@ -44,13 +55,18 @@ import { MessagesComponent }    from './messages/messages.component';
     DashboardComponent,
     HeroesComponent,
     HeroDetailComponent,
+    HeroDetail2Component,
     MessagesComponent,
     // #enddocregion v1
-    HeroSearchComponent
+    HeroSearchComponent,
+    HeroDetail2Component,
+    MyHighLightDirective,
+    MyHighLightComponentComponent
     // #docregion v1
   ],
   providers: [ HeroService, MessageService ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  exports: [ MyHighLightDirective ]
 })
 export class AppModule { }
 // #enddocregion , v1

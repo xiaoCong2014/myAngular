@@ -1,0 +1,26 @@
+<div>hero 2
+
+  <div nz-row>
+
+    <div nz-col [nzSpan]="12">
+      <button (click)="goBack()">go back</button>
+    </div>
+
+    <div nz-col [nzSpan]="12">
+      <button nz-button
+              [nzType]="'primary'"
+              (click)="myClick()">测试按钮
+      </button>
+    </div>
+
+  </div>
+
+  <div nz-row>
+
+  <nz-datepicker [(ngModel)]="_date"
+                 [nzPlaceHolder]="'Select date'"
+                 (ngModelChange)="pickerClick(event)"
+  ></nz-datepicker>
+
+  </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input } from '@angular/core';
 
 @Component({
   selector: 'app-my-high-light-component',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyHighLightComponentComponent implements OnInit {
 
-  color: string;
+  @Input('color') color: string;
 
   constructor() {
     this.color = 'yellow';

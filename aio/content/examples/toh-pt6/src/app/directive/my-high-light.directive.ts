@@ -18,6 +18,8 @@ export class MyHighLightDirective {
   @Input('highlightColor') highlightColor: string;
   @Input('highlightColor2') highlightColor2: string;
 
+// @Style
+
 
   // #enddocregion color
 
@@ -37,6 +39,12 @@ export class MyHighLightDirective {
 
   private highlight(color: string) {
     this.el.nativeElement.style.backgroundColor = color;
+
+    // console.info(this.el.nativeElement.innerHTML);
+    this.el.nativeElement.innerHTML = '内部的innerHTML';
+    // console.info('改动后');
+    // console.info(this.el.nativeElement.innerHTML);
+
   }
 
 }

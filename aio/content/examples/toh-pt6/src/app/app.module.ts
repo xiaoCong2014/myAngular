@@ -65,8 +65,7 @@ import { MyHighLightComponentComponent } from './my-high-light-component/my-high
     // #docregion v1
   ],
   providers: [ HeroService, MessageService ],
-  bootstrap: [ AppComponent ],
-  exports: [ MyHighLightDirective ]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
 // #enddocregion , v1
